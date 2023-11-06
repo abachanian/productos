@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <link rel="stylesheet" href="./css/style.css" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Cargar Producto</title>
+    </head>
+    <body>
+      <div class="wrapper">
+        <header class="principal">
+          <div class="principal__texto">
+            <h1 class="principal__texto_titulo">Productos</h1>
+          </div>
+        </header>
+        <nav class="menu">
+          <button aria-expanded="false" aria-controls="menu-list">
+            <span class="open">&#9776;</span>
+            <span class="close">&#9747;</span>
+            Menú
+          </button>
+          <ul class="menu__list">
+            <li>
+              <a href="">Productos</a>
+            </li>
+            <li>
+              <a href="./listado.html">Listado de Productos</a>
+            </li>
+            <li>
+              <a href="./index.html">Cargar Productos</a>
+            </li>
+            <li>
+              <a href="">Editar Productos</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="carga" id="">
+          <h2 class="carga">Formulario de carga</h2>
+          <form
+            action="./php/cargar_producto.php"
+            method="post"
+            enctype="multipart/form-data"
+            class="carga__producto"
+          >
+            <label for="html">Producto:</label>
+            <input
+              type="text"
+              name="Producto"
+              class="carga__producto__input"
+              placeholder="Producto"
+            />
+            <label for="html">ID:</label>
+            <input
+              type="text"
+              name="ID"
+              class="carga__producto__input"
+              placeholder="ID"
+            />
+            <label for="html">Descripción:</label>
+            <input
+              type="text"
+              name="Descripcion"
+              class="carga__producto__input"
+              placeholder="Descripción del producto"
+            />
+            <label for="html">Precio:</label>
+            <input
+              type="number"
+              name="Precio"
+              class="carga__producto__input"
+              placeholder="Precio"
+            />
+            <label for="html">Imágen:</label>
+            <input
+              type="file"
+              name="imagen"
+              class="carga__producto__file"
+              accept="image/*"
+              required
+            />
+            <button type="submit" class="carga__producto__input">Enviar</button>
+          </form>
+        </div>
+        <footer class="footer">
+          <div class="footer__menu">
+            <h5 class="titulo">Secciones</h5>
+            <a href="">Productos</a>
+            <a href="./listado.html">Listado de Productos</a>
+            <a href="./index.html">Cargar Productos</a>
+            <a href="">Editar Productos</a>
+          </div>
+        </footer>
+      </div>
+      <script>
+        const navButton = document.querySelector("button[aria-expanded]");
+        function toggleNav({ target }) {
+          const expandir =
+            target.getAttribute("aria-expanded") === "true" || false;
+          navButton.setAttribute("aria-expanded", !expandir);
+        }
+        navButton, addEventListener("click", toggleNav);
+      </script>
+    </body>
+  </html>
+</html>

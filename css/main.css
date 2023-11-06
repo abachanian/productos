@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+:root {
+  --color-negro: rgba(38, 38, 38, 1);
+  --color-blanco: rgb(255, 255, 255);
+  --color-azul: rgba(56, 92, 165, 1);
+  --color-azuloscuro: rgba(47, 87, 140, 1);
+  --color-petroleo: rgba(38, 142, 165, 1);
+  --sombra-h-negra: 0.1rem 0.1rem 0.2rem rgba(32, 32, 32, 0.7);
+  --sombra-azul: 0.2rem 0.2rem 0.3rem 0.1rem rgba(47, 87, 140, 0.7);
+  --sombra-negra: 0.2rem 0.2rem 0.3rem 0.1rem rgba(32, 32, 32, 0.7);
+  --verde-claro: rgb(5, 212, 40);
+  --verde-oscuro: rgb(3, 177, 32);
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+  font-size: 10px;
+}
+* *,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background: var(--color-blanco);
+  margin: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--color-negro);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: -0.1rem;
+}
+
+h1 {
+  font-size: 5.5rem;
+  margin: 1rem 0;
+}
+
+h2 {
+  font-size: 5rem;
+}
+
+h3 {
+  margin: 0;
+  font-size: 3.5rem;
+}
+
+h4 {
+  font-size: 2rem;
+  margin: 2rem 0; /*OKO ACA*/
+  color: var(--color-blanco);
+}
+
+h5 {
+  font-size: 3rem;
+  margin: 2rem 0; /*OKO ACA*/
+  color: var(--color-blanco);
+}
+
+p {
+  color: var(--color-blanco);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: justify;
+  margin: 0.5rem;
+}
+
+a {
+  color: var(--color-blanco);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 700;
+  font-size: 2rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+li {
+  color: var(--color-blanco);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-align: justify;
+  border: solid 0.2rem var(--color-azuloscuro);
+  border-radius: 1rem;
+  padding: 0 2rem;
+}
+
+button[type="submit"] {
+  padding: 0.5rem;
+  color: var(--color-blanco);
+  font-size: 2rem;
+  font-weight: 800;
+  width: 100%;
+  text-align: center;
+  border-radius: 2rem;
+  border: solid var(--verde-claro);
+  background: var(--verde-claro);
+  box-shadow: var(--sombra-negra);
+  height: auto;
+  text-shadow: var(--sombra-h-negra);
+}
+
+button[type="submit"]:active {
+  background: var(--verde-oscuro);
+  box-shadow: none;
+  transition: all 0.05s ease 0s;
+}
+
+button[type="submit"]:hover {
+  background: var(--verde-oscuro);
+  border: solid var(--verde-oscuro);
+  transition: all 0.1s ease 0s;
+}
+
+img {
+  object-fit: cover;
+}
+
+table {
+  margin: 0.5rem;
+  width: 100%;
+}
+
+table th {
+  color: var(--color-negro);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 900;
+  text-align: center;
+  letter-spacing: 0.3rem;
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+
+table td {
+  color: var(--color-blanco);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 400;
+  font-size: 1.3rem;
+  text-align: left;
+  padding: 0.5rem 0;
+  letter-spacing: 0.05rem;
+}
+
+table td:nth-child(1) {
+  font-weight: 900;
+}
+
+form label {
+  color: var(--color-blanco);
+  text-shadow: var(--sombra-h-negra);
+  font-weight: 900;
+  font-size: 1.3rem;
+  text-align: center;
+  letter-spacing: 0.05rem;
+  margin: 1rem;
+}
+
+form input,
+textarea {
+  border: solid 0.2rem var(--color-azuloscuro);
+  border-radius: 1rem;
+  height: 100%;
+}
+
+form input:focus,
+textarea:focus {
+  background-color: rgb(214, 245, 252);
+}

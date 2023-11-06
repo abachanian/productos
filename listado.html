@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+  <html>
+    <head>
+      <meta charset="UTF-8" />
+      <link rel="stylesheet" href="./css/main.css" />
+      <link rel="stylesheet" href="./css/style.css" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Listado de Productos</title>
+    </head>
+    <body>
+      <div class="wrapper">
+        <header class="principal">
+          <div class="principal__texto">
+            <h1 class="principal__texto_titulo">Listado de Productos</h1>
+          </div>
+        </header>
+        <nav class="menu">
+          <button aria-expanded="false" aria-controls="menu-list">
+            <span class="open">&#9776;</span>
+            <span class="close">&#9747;</span>
+            Menú
+          </button>
+          <ul class="menu__list">
+            <li>
+              <a href="">Productos</a>
+            </li>
+            <li>
+              <a href="./listado.html">Listado de Productos</a>
+            </li>
+            <li>
+              <a href="./index.html">Crear Productos</a>
+            </li>
+            <li>
+              <a href="">Editar Productos</a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="listado">
+          <h2 class="titulo">Listado de Productos</h2>
+          <div class="productos__detalles">
+            <table class="">
+              <tr>
+                <th>Producto</th>
+                <th>ID</th>
+                <th>Descripción</th>
+                <th>Precio</th>
+              </tr>
+              <?php include("./php/listar_productos.php"); ?>
+            </table>
+          </div>
+        </div>
+        <footer class="footer">
+          <div class="footer__menu">
+            <h5 class="titulo">Secciones</h5>
+            <a href="">Productos</a>
+            <a href="./listado.html">Listado de Productos</a>
+            <a href="./index.html">Crear Productos</a>
+            <a href="">Editar Productos</a>
+          </div>
+        </footer>
+      </div>
+      <script>
+        const navButton = document.querySelector("button[aria-expanded]");
+        function toggleNav({ target }) {
+          const expandir =
+            target.getAttribute("aria-expanded") === "true" || false;
+          navButton.setAttribute("aria-expanded", !expandir);
+        }
+        navButton, addEventListener("click", toggleNav);
+      </script>
+    </body>
+  </html>
+</html>
